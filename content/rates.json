@@ -1,0 +1,9 @@
+{
+  "individual_rate":   "155",
+  "couples_rate":      "200",
+  "in_network_text":   "I am currently in-network with the UVA Student Health Insurance Plan. If you are a UVA student covered under this plan, your sessions may be covered at your in-network rate and payment is handled through your insurance.",
+  "out_of_network_p1": "While I am out-of-network with most insurance plans, many plans offer out-of-network benefits that can reimburse a portion of your cost. I can provide a monthly superbill, an itemized receipt with everything your insurance company needs to process your claim. You submit it directly to your insurer, and they reimburse you according to your plan's benefits.",
+  "out_of_network_p2": "For out-of-network clients, payment is due at the time of your appointment. I accept all major credit and debit cards, as well as HSA and FSA cards, which many clients use to cover the cost of therapy with pre-tax dollars.",
+  "out_of_network_p3": "I recommend calling the member services number on the back of your insurance card and asking about your out-of-network mental health benefits before getting started.",
+  "bridge_text":       "Not sure what applies to you? Bring any questions about fees or insurance to your free consultation \u2014 there's no pressure and no commitment."
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couples Therapy in Charlottesville, VA · EFT · Kate Modica, LCSW</title>
+  <meta name="description" content="Couples therapy in Charlottesville, VA using Emotionally Focused Therapy (EFT) and Transformative Couples Therapy. Helping partners break stuck patterns and rebuild connection." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Blue Ridge Resilience Therapy" />
+  <meta property="og:title" content="Couples Therapy in Charlottesville, VA · EFT · Kate Modica, LCSW" />
+  <meta property="og:description" content="Couples therapy in Charlottesville, VA using Emotionally Focused Therapy (EFT) and Transformative Couples Therapy. Helping partners break stuck patterns and rebuild connection." />
+  <meta property="og:url" content="https://blueridgeresilience.com/couples-therapy.html" />
+  <meta property="og:image" content="https://blueridgeresilience.com/headshot_kate.jpg" />
+  <link rel="canonical" href="https://blueridgeresilience.com/couples-therapy.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Inter:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ═══ COUPLES THERAPY SPECIFIC ═══ */
+
+    /* WHO */
+    .who { padding: 120px 0; background: var(--milk); }
+    .who-head { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+    .who-head .kicker { justify-content: center; margin-bottom: 20px; }
+    .who-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 20px; }
+    .who-head h2 em { font-style: italic; color: var(--clay-dk); }
+    .who-head p { font-size: 17px; color: var(--mid); line-height: 1.65; }
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .who-card {
+      background: var(--shell); border-radius: 16px; padding: 32px 28px;
+      border: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.6;
+      color: var(--mid); transition: all 0.3s var(--ease);
+    }
+    .who-card:hover { transform: translateY(-3px); border-color: var(--clay-soft); }
+    .who-card::before { display: none; }
+
+    /* APPROACH */
+    .approach { padding: 120px 0; background: var(--shell); }
+    .approach-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .approach-content h2 { font-size: clamp(36px, 4vw, 58px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+    .approach-content h2 em { font-style: italic; color: var(--clay-dk); }
+    .approach-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+
+    /* RUMI — dark */
+    .rumi { padding: 120px 0; background: var(--plum); text-align: center; position: relative; overflow: hidden; }
+    .rumi::before { content: ''; position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(211,103,62,.12), transparent 60%); pointer-events: none; }
+    .rumi-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
+    .rumi blockquote { font-family: var(--display); font-style: italic; font-size: clamp(24px, 3.2vw, 44px); font-weight: 300; line-height: 1.35; color: var(--milk); letter-spacing: -0.015em; }
+    .rumi cite { display: block; margin-top: 28px; font-family: var(--body); font-style: normal; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(248,243,231,.5); font-weight: 500; }
+
+    /* SESSION */
+    .session { padding: 120px 0; background: var(--shell-deep); }
+    .session-head { max-width: 760px; margin: 0 auto 72px; }
+    .session-head h2 { font-size: clamp(36px, 4vw, 58px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 20px; }
+    .session-head h2 em { font-style: italic; color: var(--clay-dk); }
+    .session-head p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+    .session-steps { display: flex; flex-direction: column; gap: 0; max-width: 900px; }
+    .session-step {
+      display: grid; grid-template-columns: 72px 1fr; gap: 32px; align-items: start;
+      padding: 32px 0; border-top: 1px solid var(--rule);
+    }
+    .session-step:last-child { border-bottom: 1px solid var(--rule); }
+    .step-num { font-family: var(--display); font-style: italic; font-size: 52px; font-weight: 300; color: var(--clay); line-height: 0.9; }
+    .session-step h3 { font-family: var(--display); font-size: 28px; color: var(--plum); margin-bottom: 10px; }
+    .session-step p { font-size: 16px; line-height: 1.65; color: var(--mid); }
+
+    /* OUTCOMES — dark */
+    .outcomes { padding: 120px 0; background: var(--plum); }
+    .outcomes .kicker { color: rgba(248,243,231,.7); }
+    .outcomes .kicker::before { background: rgba(248,243,231,.5); }
+    .outcomes-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .outcomes-content h2 { font-size: clamp(36px, 4vw, 58px); color: var(--milk); line-height: 1.02; letter-spacing: -0.025em; margin: 20px 0 32px; }
+    .outcomes-content h2 em { font-style: italic; color: var(--clay-soft); }
+    .outcomes-content p { font-size: 17px; line-height: 1.7; color: rgba(248,243,231,.8); margin-bottom: 20px; }
+    .stat-stack { display: flex; flex-direction: column; gap: 20px; }
+    .stat-card {
+      background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14);
+      border-radius: 16px; padding: 36px 32px;
+    }
+    .stat-num { font-family: var(--display); font-style: italic; font-size: clamp(48px, 5.5vw, 72px); font-weight: 300; color: var(--clay-soft); line-height: 0.95; margin-bottom: 14px; letter-spacing: -0.02em; }
+    .stat-card p { font-size: 15.5px; color: rgba(248,243,231,.8); line-height: 1.55; margin: 0; }
+    .stat-source { font-family: var(--display); font-style: italic; font-size: 13px; color: rgba(248,243,231,.45); margin-top: 24px; }
+
+    /* Responsive */
+    @media (max-width: 1040px) {
+      .who-grid { grid-template-columns: 1fr 1fr; }
+      .approach-inner, .outcomes-inner { grid-template-columns: 1fr; gap: 56px; }
+      .who, .approach, .rumi, .session, .outcomes { padding: 80px 0; }
+    }
+    @media (max-width: 640px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .session-step { grid-template-columns: 52px 1fr; gap: 20px; }
+      .step-num { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          <circle cx="27" cy="11" r="2.4" fill="#D3673E"/>
+        </svg>
+      </span>
+      <span class="brand-stack">
+        <span class="brand-name">Blue Ridge Resilience</span>
+        <span class="brand-tag">Therapy · Charlottesville, VA</span>
+      </span>
+    </a>
+    <nav class="primary-nav">
+      <a href="individual-therapy.html">Individual Therapy</a>
+      <a href="couples-therapy.html" class="active">Couples Therapy</a>
+      <a href="about.html">About Kate</a>
+      <a href="rates.html">Rates</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn btn-sm">Schedule a Free Consultation</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="individual-therapy.html">Individual Therapy</a>
+    <a href="couples-therapy.html">Couples Therapy</a>
+    <a href="about.html">About Kate</a>
+    <a href="rates.html">Rates</a>
+    <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" id="main-content">
+  <div class="container">
+    <div class="page-hero-split">
+      <div class="page-hero-copy">
+        <span class="kicker reveal">Couples Therapy</span>
+        <h1 class="reveal reveal-d1">When your connection suffers, everything feels <em>harder.</em></h1>
+        <p class="page-hero-lead reveal reveal-d2">__hero_p1__</p>
+        <p class="page-hero-lead reveal reveal-d2">__hero_p2__</p>
+        <div class="page-hero-actions reveal reveal-d3">
+          <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+        </div>
+      </div>
+      <div class="page-hero-figure reveal reveal-d2">
+        <img src="IMG_4212 2 copy.JPG" alt="Kate Modica, LCSW, therapist in Charlottesville, VA" style="object-position: center center;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who">
+  <div class="container">
+    <div class="who-head">
+      <span class="kicker reveal">Who I work with</span>
+      <h2 class="reveal reveal-d1">For couples who are committed, <em>but stuck.</em></h2>
+      <p class="reveal reveal-d2">The couples I work with aren't giving up. They care about their relationship. But they've found themselves caught in a cycle that feels impossible to break on their own.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal">You have the same argument over and over, and it never really gets resolved.</div>
+      <div class="who-card reveal reveal-d1">One or both of you shuts down, and the distance between you keeps growing.</div>
+      <div class="who-card reveal reveal-d2">You feel more like roommates than partners, and you miss the closeness you used to have.</div>
+      <div class="who-card reveal">Small things escalate quickly, and you're not sure why it keeps happening.</div>
+      <div class="who-card reveal reveal-d1">You love each other but struggle to feel like you're actually on the same team.</div>
+      <div class="who-card reveal reveal-d2">You've tried talking it through on your own and keep ending up in the same place.</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach">
+  <div class="container">
+    <div class="approach-inner">
+      <div class="approach-content">
+        <span class="kicker reveal">My approach</span>
+        <h2 class="reveal reveal-d1">Getting to what's <em>really happening.</em></h2>
+        <p class="reveal reveal-d2">__approach_p1__</p>
+        <p class="reveal reveal-d2">__approach_p2__</p>
+        <p class="reveal reveal-d2">__approach_p3__</p>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="pullquote">
+          __pullquote__
+          <cite>Kate Modica, LCSW</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RUMI -->
+<section class="rumi">
+  <div class="container rumi-inner">
+    <blockquote class="reveal reveal-d1">
+      "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it."
+    </blockquote>
+    <cite class="reveal reveal-d2">Rumi</cite>
+  </div>
+</section>
+
+<!-- SESSION -->
+<section class="session">
+  <div class="container">
+    <div class="session-head">
+      <span class="kicker reveal">What to expect</span>
+      <h2 class="reveal reveal-d1">What the work actually <em>looks like.</em></h2>
+      <p class="reveal reveal-d2">__session_p1__</p>
+      <p class="reveal reveal-d2">__session_p2__</p>
+      <p class="reveal reveal-d2">__session_p3__</p>
+    </div>
+    <div class="session-steps">
+      <div class="session-step reveal">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Understand the pattern</h3>
+          <p>We identify what cycle keeps pulling you apart and what each partner experiences when it happens.</p>
+        </div>
+      </div>
+      <div class="session-step reveal">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Reach beneath the surface</h3>
+          <p>We explore what's underneath the surface responses, the deeper feelings and needs that often go unspoken.</p>
+        </div>
+      </div>
+      <div class="session-step reveal">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Try something different</h3>
+          <p>With new understanding comes the possibility of new responses. We practice turning toward each other in moments that used to pull you apart.</p>
+        </div>
+      </div>
+      <div class="session-step reveal">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Rebuild the bond</h3>
+          <p>Over time, a new story of your relationship emerges, one grounded in genuine connection and resilience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes">
+  <div class="container">
+    <div class="outcomes-inner">
+      <div class="outcomes-content">
+        <span class="kicker kicker-light reveal">The outcomes</span>
+        <h2 class="reveal reveal-d1">What becomes <em>possible.</em></h2>
+        <p class="reveal reveal-d2">__outcomes_p1__</p>
+        <p class="reveal reveal-d2">__outcomes_p2__</p>
+        <p class="reveal reveal-d2">__outcomes_p3__</p>
+      </div>
+      <div>
+        <div class="stat-stack">
+          <div class="stat-card reveal">
+            <div class="stat-num">70–75%</div>
+            <p>of couples move from distress to full recovery.</p>
+          </div>
+          <div class="stat-card reveal reveal-d1">
+            <div class="stat-num">90%</div>
+            <p>report significant, lasting improvements in their relationship.</p>
+          </div>
+        </div>
+        <p class="stat-source reveal reveal-d2">Based on decades of research into Emotionally Focused Couples Therapy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="reveal reveal-d1">Ready to find your way <em>back to each other?</em></h2>
+    <p class="reveal reveal-d2">Schedule a free 15-minute consultation. We'll talk briefly about what's bringing you in and whether working together feels like a good fit.</p>
+    <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn reveal reveal-d2">Schedule a Free Consultation</a>
+    <span class="cta-sub reveal reveal-d3">Free · 15 minutes · No commitment</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-big">You don't have to figure it out <em>alone.</em></div>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+              <circle cx="27" cy="11" r="2.4" fill="#E8A07F"/>
+            </svg>
+          </span>
+          <span class="brand-name">Blue Ridge Resilience</span>
+        </a>
+        <p>Providing individual and couples therapy in Charlottesville, VA, helping people move from surviving to genuinely thriving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="individual-therapy.html">Individual Therapy</a></li>
+          <li><a href="couples-therapy.html">Couples Therapy</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="about.html">About Kate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>__address_line1__<br/>__city_state_zip__</li>
+          <li><a href="tel:4349569238">__phone__</a></li>
+          <li><a href="mailto:__email__">__email__</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>__hours_days__<br/>__hours_times__</li></ul>
+        <div class="footer-extras">Free parking · Elevator access</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Blue Ridge Resilience Therapy · Kate Modica, LCSW</p>
+      <p><em>Built with care in Charlottesville, VA</em></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+</script>
+</body>
+</html>
