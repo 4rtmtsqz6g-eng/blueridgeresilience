@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rates &amp; Insurance · Blue Ridge Resilience Therapy · Kate Modica, LCSW</title>
+  <meta name="description" content="Rates, insurance, and payment information for therapy with Kate Modica, LCSW in Charlottesville, VA. Individual sessions $155, couples sessions $200. HSA/FSA accepted, out-of-network reimbursement supported." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Blue Ridge Resilience Therapy" />
+  <meta property="og:title" content="Rates &amp; Insurance · Blue Ridge Resilience Therapy · Kate Modica, LCSW" />
+  <meta property="og:description" content="Rates, insurance, and payment information for therapy with Kate Modica, LCSW in Charlottesville, VA. Individual sessions $155, couples sessions $200. HSA/FSA accepted." />
+  <meta property="og:url" content="https://blueridgeresilience.com/rates.html" />
+  <meta property="og:image" content="https://blueridgeresilience.com/headshot_kate.jpg" />
+  <link rel="canonical" href="https://blueridgeresilience.com/rates.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Inter:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ═══ RATES PAGE SPECIFIC ═══ */
+
+    /* HERO */
+    .page-hero-centered { background: radial-gradient(ellipse at 50% 160%, rgba(211,103,62,.1), transparent 60%); }
+
+    /* RATES CARDS */
+    .rates { padding: 100px 0; background: var(--shell); }
+    .rates-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+    .rate-card {
+      background: var(--milk); border-radius: 24px; padding: 48px 44px;
+      border: 1px solid var(--rule-soft); position: relative; overflow: hidden;
+    }
+    .rate-card:first-child { border-top: 3px solid var(--clay); }
+    .rate-card:last-child { border-top: 3px solid var(--plum); }
+    .rate-card::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(211,103,62,.08), transparent 70%);
+    }
+    .rate-card:last-child::before { background: radial-gradient(circle, rgba(74,44,30,.07), transparent 70%); }
+    .rate-label { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--clay-dk); font-weight: 500; margin-bottom: 20px; }
+    .rate-card:last-child .rate-label { color: var(--plum); }
+    .rate-card h3 { font-family: var(--display); font-size: 30px; color: var(--plum); margin-bottom: 8px; }
+    .rate-duration { font-size: 13.5px; color: var(--muted); margin-bottom: 28px; letter-spacing: 0.04em; }
+    .rate-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--rule-soft); }
+    .rate-amount { font-family: var(--display); font-size: 72px; font-weight: 300; color: var(--plum); line-height: 0.9; letter-spacing: -0.02em; }
+    .rate-per { font-size: 14px; color: var(--muted); font-weight: 400; }
+    .rate-card p { font-size: 15.5px; line-height: 1.65; color: var(--mid); }
+
+    /* PAYMENT */
+    .payment { padding: 100px 0; background: var(--milk); }
+    .payment-inner { display: flex; flex-direction: column; gap: 20px; max-width: 860px; margin: 0 auto; }
+    .payment-block {
+      background: var(--shell); border-radius: 20px; padding: 40px 36px;
+      border: 1px solid var(--rule-soft);
+    }
+    .payment-block:first-child { border-left: 4px solid var(--plum); }
+    .payment-block:last-child  { border-left: 4px solid var(--clay); }
+    .payment-block h2 { font-size: clamp(24px, 2.6vw, 36px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 24px; }
+    .payment-block h2 em { font-style: italic; color: var(--clay-dk); }
+    .payment-block p { font-size: 16px; line-height: 1.7; margin-bottom: 18px; color: var(--mid); }
+
+    /* RATES HEADER */
+    .rates-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+    .rates-header h2 { font-size: clamp(32px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.02em; margin-top: 16px; }
+    .rates-header h2 em { font-style: italic; color: var(--clay-dk); }
+    .payment-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; background: var(--milk); border: 1px solid var(--rule);
+      border-radius: 999px; font-size: 13.5px; font-weight: 500; color: var(--plum);
+      transition: all 0.3s var(--ease);
+    }
+    .tag:hover { background: var(--plum); color: var(--milk); border-color: var(--plum); }
+    .tag::before { content: '✓'; font-size: 12px; color: var(--clay); }
+    .tag:hover::before { color: var(--clay-soft); }
+
+    /* GFE — dark */
+    .gfe { padding: 100px 0; background: var(--plum); position: relative; overflow: hidden; }
+    .gfe::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(211,103,62,.1), transparent 60%); pointer-events: none; }
+    .gfe .kicker { color: rgba(248,243,231,.7); }
+    .gfe .kicker::before { background: rgba(248,243,231,.5); }
+    .gfe-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
+    .gfe h2 { font-size: clamp(32px, 4vw, 56px); color: var(--milk); line-height: 1.02; letter-spacing: -0.025em; margin: 20px 0 32px; }
+    .gfe h2 em { font-style: italic; color: var(--clay-soft); }
+    .gfe-lead { font-size: 18px; line-height: 1.7; color: rgba(248,243,231,.85); margin-bottom: 32px; }
+    .gfe-box {
+      background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14);
+      border-left: 3px solid var(--clay-soft); border-radius: 4px;
+      padding: 44px 52px; backdrop-filter: blur(8px);
+    }
+    .gfe-box p { font-size: 15.5px; line-height: 1.7; color: rgba(248,243,231,.8); margin-bottom: 24px; }
+    .gfe-box p:last-child { margin-bottom: 0; }
+    .gfe-box a { color: var(--clay-soft); border-bottom: 1px solid var(--clay-soft); padding-bottom: 1px; transition: all 0.3s var(--ease); }
+    .gfe-box a:hover { color: var(--milk); border-bottom-color: var(--milk); }
+
+    /* BRIDGE */
+    .rates-bridge { padding: 72px 0; }
+    .rates-bridge p { font-size: 18px; color: var(--mid); max-width: 600px; margin: 0 auto 28px; text-align: center; }
+    .rates-bridge-cta { text-align: center; }
+
+    /* Responsive */
+    @media (max-width: 1040px) {
+      .rates-grid { grid-template-columns: 1fr; max-width: 520px; }
+      .rates, .payment, .gfe { padding: 80px 0; }
+    }
+    @media (max-width: 640px) {
+      .rate-card { padding: 36px 28px; }
+      .rate-amount { font-size: 56px; }
+      .gfe-box { padding: 28px 24px; }
+      .payment-block { padding: 32px 28px; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          <circle cx="27" cy="11" r="2.4" fill="#D3673E"/>
+        </svg>
+      </span>
+      <span class="brand-stack">
+        <span class="brand-name">Blue Ridge Resilience</span>
+        <span class="brand-tag">Therapy · Charlottesville, VA</span>
+      </span>
+    </a>
+    <nav class="primary-nav">
+      <a href="individual-therapy.html">Individual Therapy</a>
+      <a href="couples-therapy.html">Couples Therapy</a>
+      <a href="about.html">About Kate</a>
+      <a href="rates.html" class="active">Rates</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn btn-sm">Schedule a Free Consultation</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="individual-therapy.html">Individual Therapy</a>
+    <a href="couples-therapy.html">Couples Therapy</a>
+    <a href="about.html">About Kate</a>
+    <a href="rates.html">Rates</a>
+    <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero page-hero-centered" id="main-content">
+  <div class="container">
+    <span class="kicker reveal">Rates &amp; Insurance</span>
+    <h1 class="reveal reveal-d1">Simple, <em>transparent</em> pricing.</h1>
+    <p class="page-hero-lead reveal reveal-d2">Here's everything you need to know about fees, insurance, and how to get started.</p>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="payment">
+  <div class="container">
+    <div class="payment-inner">
+      <div class="payment-block reveal">
+        <h2>UVA Student Health <em>Insurance Plan.</em></h2>
+        <p>I am currently in-network with the UVA Student Health Insurance Plan. If you are a UVA student covered under this plan, your sessions may be covered at your in-network rate and payment is handled through your insurance.</p>
+      </div>
+      <div class="payment-block reveal">
+        <h2>Out-of-network &amp; <em>self-pay.</em></h2>
+        <p>While I am out-of-network with most insurance plans, many plans offer out-of-network benefits that can reimburse a portion of your cost. I can provide a monthly superbill, an itemized receipt with everything your insurance company needs to process your claim. You submit it directly to your insurer, and they reimburse you according to your plan's benefits.</p>
+        <p>For out-of-network clients, payment is due at the time of your appointment. I accept all major credit and debit cards, as well as HSA and FSA cards, which many clients use to cover the cost of therapy with pre-tax dollars.</p>
+        <p>I recommend calling the member services number on the back of your insurance card and asking about your out-of-network mental health benefits before getting started.</p>
+        <div class="payment-tags">
+          <span class="tag">Credit &amp; debit cards</span>
+          <span class="tag">HSA cards</span>
+          <span class="tag">FSA cards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RATE CARDS -->
+<section class="rates">
+  <div class="container">
+    <div class="rates-header reveal">
+      <h2>Session <em>fees.</em></h2>
+    </div>
+    <div class="rates-grid">
+      <div class="rate-card reveal">
+        <div class="rate-label">Individual Therapy</div>
+        <h3>One-on-one sessions</h3>
+        <div class="rate-duration">50 to 60 minutes</div>
+        <div class="rate-price">
+          <span class="rate-amount">$155</span>
+          <span class="rate-per">per session</span>
+        </div>
+        <p>Individual therapy sessions using AEDP, a research-supported experiential approach for adults working through anxiety, depression, perfectionism, grief, and more.</p>
+      </div>
+      <div class="rate-card reveal reveal-d1">
+        <div class="rate-label">Couples Therapy</div>
+        <h3>Sessions for two</h3>
+        <div class="rate-duration">50 to 60 minutes</div>
+        <div class="rate-price">
+          <span class="rate-amount">$200</span>
+          <span class="rate-per">per session</span>
+        </div>
+        <p>Couples therapy sessions using EFT and Transformative Couples Therapy, focused on breaking stuck patterns and building a deeper, more resilient relationship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE -->
+<section class="rates-bridge">
+  <div class="container">
+    <p class="reveal">Not sure what applies to you? Bring any questions about fees or insurance to your free consultation — there's no pressure and no commitment.</p>
+    <div class="rates-bridge-cta">
+      <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn reveal">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- GOOD FAITH ESTIMATE -->
+<section class="gfe">
+  <div class="container gfe-inner">
+    <span class="kicker kicker-light reveal">Your rights</span>
+    <h2 class="reveal reveal-d1">Good Faith <em>Estimate.</em></h2>
+    <p class="gfe-lead reveal reveal-d2">Under the No Surprises Act, you have the right to receive a Good Faith Estimate of the expected cost of your care before beginning services.</p>
+    <div class="gfe-box reveal reveal-d2">
+      <p>You have the right to receive a "Good Faith Estimate" explaining how much your medical and mental health care will cost. Under the law, healthcare providers need to give patients who don't have insurance, or who are not using insurance, an estimate of the expected charges for medical services, including psychotherapy services.</p>
+      <p>You have the right to receive a Good Faith Estimate for the total expected cost of any non-emergency healthcare services, including psychotherapy services. You can ask your healthcare provider, and any other provider you choose, for a Good Faith Estimate before you schedule a service. If you receive a bill that is at least $400 more than your Good Faith Estimate, you can dispute the bill.</p>
+      <p>For questions or more information about your right to a Good Faith Estimate, visit <a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener">cms.gov/nosurprises</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-big">You don't have to figure it out <em>alone.</em></div>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+              <circle cx="27" cy="11" r="2.4" fill="#E8A07F"/>
+            </svg>
+          </span>
+          <span class="brand-name">Blue Ridge Resilience</span>
+        </a>
+        <p>Providing individual and couples therapy in Charlottesville, VA, helping people move from surviving to genuinely thriving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="individual-therapy.html">Individual Therapy</a></li>
+          <li><a href="couples-therapy.html">Couples Therapy</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="about.html">About Kate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>914 E Jefferson St, Suite 204<br/>Charlottesville, VA 22902</li>
+          <li><a href="tel:4349569238">(434) 956-9238</a></li>
+          <li><a href="mailto:kate@blueridgeresilience.com">kate@blueridgeresilience.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>Monday – Friday<br/>9:30am – 4:30pm</li></ul>
+        <div class="footer-extras">Free parking · Elevator access</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Blue Ridge Resilience Therapy · Kate Modica, LCSW</p>
+      <p><em>Built with care in Charlottesville, VA</em></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+</script>
+</body>
+</html>

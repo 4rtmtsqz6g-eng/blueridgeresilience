@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Individual Therapy in Charlottesville, VA · AEDP · Kate Modica, LCSW</title>
+  <meta name="description" content="Individual therapy in Charlottesville, VA using AEDP — an experiential, research-supported approach for anxiety, depression, perfectionism, grief, and more." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Blue Ridge Resilience Therapy" />
+  <meta property="og:title" content="Individual Therapy in Charlottesville, VA · AEDP · Kate Modica, LCSW" />
+  <meta property="og:description" content="Individual therapy in Charlottesville, VA using AEDP — an experiential, research-supported approach for anxiety, depression, perfectionism, grief, and more." />
+  <meta property="og:url" content="https://blueridgeresilience.com/individual-therapy.html" />
+  <meta property="og:image" content="https://blueridgeresilience.com/headshot_kate.jpg" />
+  <link rel="canonical" href="https://blueridgeresilience.com/individual-therapy.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Inter:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ═══ INDIVIDUAL THERAPY SPECIFIC ═══ */
+
+    /* WHO */
+    .who { padding: 120px 0; background: var(--milk); }
+    .who-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+    .who-head .kicker { justify-content: center; margin-bottom: 20px; }
+    .who-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .who-head h2 em { font-style: italic; color: var(--clay-dk); }
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .who-card {
+      background: var(--shell); border-radius: 16px; padding: 32px 28px;
+      border: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.6;
+      color: var(--mid); position: relative; transition: all 0.3s var(--ease);
+    }
+    .who-card:hover { transform: translateY(-3px); border-color: var(--clay-soft); }
+    .who-card::before { display: none; }
+
+    /* APPROACH */
+    .approach { padding: 120px 0; background: var(--shell); }
+    .approach-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .approach-content h2 { font-size: clamp(36px, 4vw, 60px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+    .approach-content h2 em { font-style: italic; color: var(--clay-dk); }
+    .approach-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+    .approach-content strong { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--plum); font-size: 19px; }
+    .approach-figure { position: relative; }
+    .approach-figure img { width: 100%; height: auto; max-height: 560px; border-radius: 20px; filter: saturate(0.94) contrast(1.02); }
+    .approach-figure::after {
+      content: ''; position: absolute; inset: 18px 18px -18px -18px;
+      border: 1px solid var(--clay); border-radius: 20px; z-index: -1;
+    }
+
+    /* CAN HELP — dark */
+    .addresses { padding: 120px 0; background: var(--plum); }
+    .addresses .kicker { color: rgba(248,243,231,.7); }
+    .addresses .kicker::before { background: rgba(248,243,231,.5); }
+    .addresses-head { max-width: 760px; margin: 0 auto 72px; text-align: center; }
+    .addresses-head h2 { font-size: clamp(32px, 4vw, 56px); color: var(--milk); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 20px; }
+    .addresses-head h2 em { font-style: italic; color: var(--clay-soft); }
+    .addresses-head p { font-size: 17px; color: rgba(248,243,231,.75); max-width: 600px; margin: 0 auto 40px; }
+    .concerns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 960px; margin: 0 auto; }
+    .concern-item {
+      background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14); border-radius: 12px;
+      padding: 24px 22px; display: flex; gap: 16px; align-items: baseline;
+    }
+    .concern-item p { font-size: 15.5px; color: rgba(248,243,231,.85); line-height: 1.5; margin: 0; }
+
+    /* FIRST SESSION */
+    .first-session { padding: 120px 0; background: var(--shell-deep); }
+    .first-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .first-content h2 { font-size: clamp(36px, 4vw, 60px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+    .first-content h2 em { font-style: italic; color: var(--clay-dk); }
+    .first-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+
+    /* TELEHEALTH */
+    .telehealth { padding: 120px 0; background: var(--milk); }
+    .telehealth-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+    .telehealth-head .kicker { justify-content: center; margin-bottom: 20px; }
+    .telehealth-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .telehealth-head h2 em { font-style: italic; color: var(--clay-dk); }
+    .telehealth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 960px; margin: 0 auto; }
+    .tele-card {
+      background: var(--shell); border-radius: 20px; padding: 40px 36px;
+      border: 1px solid var(--rule-soft);
+    }
+    .tele-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--clay-dk); font-weight: 500; margin-bottom: 16px; }
+    .tele-card h3 { font-family: var(--display); font-size: 30px; color: var(--plum); margin-bottom: 16px; }
+    .tele-card p { font-size: 16px; line-height: 1.65; color: var(--mid); }
+
+    /* Responsive */
+    @media (max-width: 1040px) {
+      .who-grid { grid-template-columns: 1fr 1fr; }
+      .approach-inner, .first-inner { grid-template-columns: 1fr; gap: 56px; }
+      .approach-figure { max-width: 420px; }
+      .concerns-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .telehealth-grid { grid-template-columns: 1fr; }
+      .concerns-grid { grid-template-columns: 1fr; }
+      .who, .approach, .addresses, .first-session, .telehealth { padding: 80px 0; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          <circle cx="27" cy="11" r="2.4" fill="#D3673E"/>
+        </svg>
+      </span>
+      <span class="brand-stack">
+        <span class="brand-name">Blue Ridge Resilience</span>
+        <span class="brand-tag">Therapy · Charlottesville, VA</span>
+      </span>
+    </a>
+    <nav class="primary-nav">
+      <a href="individual-therapy.html" class="active">Individual Therapy</a>
+      <a href="couples-therapy.html">Couples Therapy</a>
+      <a href="about.html">About Kate</a>
+      <a href="rates.html">Rates</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn btn-sm">Schedule a Free Consultation</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="individual-therapy.html">Individual Therapy</a>
+    <a href="couples-therapy.html">Couples Therapy</a>
+    <a href="about.html">About Kate</a>
+    <a href="rates.html">Rates</a>
+    <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero" id="main-content">
+  <div class="container">
+    <div class="page-hero-split">
+      <div class="page-hero-copy">
+        <span class="kicker reveal">Individual Therapy</span>
+        <h1 class="reveal reveal-d1">You're doing fine. So why doesn't it <em>feel that way?</em></h1>
+        <p class="page-hero-lead reveal reveal-d2">Many of the people I work with are, by most measures, doing well. They show up, they achieve, they keep it together. And yet there's a persistent undercurrent of anxiety, self-doubt, or a sense that they can never quite let themselves relax.</p>
+        <p class="page-hero-lead reveal reveal-d2">If that sounds familiar, you're not alone. And you don't have to stay there.</p>
+        <div class="page-hero-actions reveal reveal-d3">
+          <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+        </div>
+      </div>
+      <div class="page-hero-figure reveal reveal-d2">
+        <img src="IMG_4212 2 copy.JPG" alt="Kate Modica, LCSW, therapist in Charlottesville, VA" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who">
+  <div class="container">
+    <div class="who-head">
+      <span class="kicker reveal">Who I work with</span>
+      <h2 class="reveal reveal-d1">You might be <em>here if…</em></h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal">You set high standards for yourself and usually meet them, but the anxiety doesn't go away when you do.</div>
+      <div class="who-card reveal reveal-d1">You wonder when people will figure out that you're not as capable as they think, even though the evidence says otherwise.</div>
+      <div class="who-card reveal reveal-d2">You have a hard time fully relaxing or letting yourself just be, even when everything is technically fine.</div>
+      <div class="who-card reveal">You notice it's easier to give care and support to others than it is to receive it yourself.</div>
+      <div class="who-card reveal reveal-d1">Anxiety, self-criticism, or a low hum of worry follows you through the day even when there's no clear reason for it.</div>
+      <div class="who-card reveal reveal-d2">You're ready to move beyond managing how you feel and begin the process of deep and lasting change.</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach">
+  <div class="container">
+    <div class="approach-inner">
+      <div class="approach-content">
+        <span class="kicker reveal">My approach</span>
+        <h2 class="reveal reveal-d1">Working through it, <em>not just talking about it.</em></h2>
+        <p class="reveal reveal-d2">I use <strong>AEDP</strong> (Accelerated Experiential Dynamic Psychotherapy), an approach that works at the level of emotion, not just thought. Rather than analyzing what's hard from the outside, we get curious about what's actually happening inside you, in real time.</p>
+        <p class="reveal reveal-d2">AEDP is built on the belief that you have an innate capacity to heal. The work isn't about fixing something broken. It's about removing the barriers that have been getting in the way of that healing. Sometimes those barriers are patterns we learned early, defenses that once made sense but no longer serve us. That process can begin from the very first session. AEDP is an evidence-supported approach, meaning the research backs up what we see in the room.</p>
+        <p class="reveal reveal-d2">What I find meaningful about this work is that the people who come to therapy are already moving toward something. That pull toward growth, toward understanding yourself, toward feeling more like yourself, is already alive in you. Our work together is to move beneath those barriers and defenses, to help you get more in touch with who you actually are.</p>
+        <a href="about.html" class="text-link reveal">More about me and how I work</a>
+      </div>
+      <div class="approach-figure reveal reveal-d1">
+        <img src="IMG_3106.JPG" alt="Kate Modica's therapy office in Charlottesville, VA" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I CAN HELP WITH -->
+<section class="addresses">
+  <div class="container">
+    <div class="addresses-head">
+      <span class="kicker kicker-light reveal">What I can help with</span>
+      <h2 class="reveal reveal-d1">Areas we might <em>explore together.</em></h2>
+      <p class="reveal reveal-d2">People come to therapy for all kinds of reasons. Here are some of the things that often come up in my work with individual clients. If something you're carrying isn't on this list, it's still worth reaching out.</p>
+      <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn reveal reveal-d2">Schedule a Free Consultation</a>
+    </div>
+    <div class="concerns-grid">
+      <div class="concern-item reveal"><p>Anxiety and persistent worry</p></div>
+      <div class="concern-item reveal reveal-d1"><p>Perfectionism and imposter syndrome</p></div>
+      <div class="concern-item reveal reveal-d2"><p>Depression and low mood</p></div>
+      <div class="concern-item reveal"><p>Low self-worth or chronic self-criticism</p></div>
+      <div class="concern-item reveal reveal-d1"><p>Grief and loss</p></div>
+      <div class="concern-item reveal reveal-d2"><p>Challenges in relationships and loneliness</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST SESSION -->
+<section class="first-session">
+  <div class="container">
+    <div class="first-inner">
+      <div class="first-content">
+        <span class="kicker reveal">Getting started</span>
+        <h2 class="reveal reveal-d1">What to expect in the <em>first session.</em></h2>
+        <p class="reveal reveal-d2">There's no pressure in our first meeting. My goal is simply to get to know you a little, to understand what's bringing you in and what you're hoping for.</p>
+        <p class="reveal reveal-d2">If emotions come up, I welcome them. Those moments often carry the most important information. I'll stay right there with you, attentive to what feels alive and real, without pushing toward any particular agenda.</p>
+        <p class="reveal reveal-d2">There's no right way to do a first session. You don't need to have it figured out before you walk in.</p>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="pullquote">
+          We are wired to heal in connection. One of the things that makes this work different is that you don't have to face what's hard alone. That changes everything.
+          <cite>Kate Modica, LCSW</cite>
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn">Schedule a Free Consultation</a>
+          <span class="cta-sub">Free · 15 minutes · No commitment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TELEHEALTH -->
+<section class="telehealth">
+  <div class="container">
+    <div class="telehealth-head">
+      <span class="kicker reveal">How we meet</span>
+      <h2 class="reveal reveal-d1">In person, online, <em>or both.</em></h2>
+      <p class="reveal reveal-d2">I offer sessions in my Charlottesville office and via telehealth. Some clients do one, some do the other, and some do a mix. Both can be genuinely powerful.</p>
+    </div>
+    <div class="telehealth-grid">
+      <div class="tele-card reveal">
+        <div class="tele-label">In Person</div>
+        <h3>Together in the room.</h3>
+        <p>There's something I value about being physically present with someone. I can notice more. The way you hold your hands, a shift in your posture, the moments when your body says something before your words do. I find real connection in that shared space.</p>
+      </div>
+      <div class="tele-card reveal reveal-d1">
+        <div class="tele-label">Telehealth</div>
+        <h3>Wherever you are.</h3>
+        <p>Telehealth offers its own kind of closeness. On screen, I often have a clearer view of your face and expression than I would across a room. I've found the work to be effective and meaningful online, and for many clients, it's the more accessible option.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="reveal reveal-d1">Ready to start <em>feeling better?</em></h2>
+    <p class="reveal reveal-d2">Schedule a free 15-minute consultation. We'll talk briefly about what's bringing you in and see if we feel like a good fit.</p>
+    <a href="https://katemo.clientsecure.me" target="_blank" rel="noopener" class="btn reveal reveal-d2">Schedule a Free Consultation</a>
+    <span class="cta-sub reveal reveal-d3">Free · 15 minutes · No commitment</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-big">You don't have to figure it out <em>alone.</em></div>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <path d="M6 28 L14 18 L20 24 L27 14 L34 28 Z" stroke="#F8F3E7" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+              <circle cx="27" cy="11" r="2.4" fill="#E8A07F"/>
+            </svg>
+          </span>
+          <span class="brand-name">Blue Ridge Resilience</span>
+        </a>
+        <p>Providing individual and couples therapy in Charlottesville, VA, helping people move from surviving to genuinely thriving.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="individual-therapy.html">Individual Therapy</a></li>
+          <li><a href="couples-therapy.html">Couples Therapy</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="about.html">About Kate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li>914 E Jefferson St, Suite 204<br/>Charlottesville, VA 22902</li>
+          <li><a href="tel:4349569238">(434) 956-9238</a></li>
+          <li><a href="mailto:kate@blueridgeresilience.com">kate@blueridgeresilience.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul><li>Monday – Friday<br/>9:30am – 4:30pm</li></ul>
+        <div class="footer-extras">Free parking · Elevator access</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Blue Ridge Resilience Therapy · Kate Modica, LCSW</p>
+      <p><em>Built with care in Charlottesville, VA</em></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+</script>
+</body>
+</html>
