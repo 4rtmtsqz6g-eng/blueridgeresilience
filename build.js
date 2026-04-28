@@ -12,19 +12,23 @@ function md(str) {
 }
 
 // ── Setup ────────────────────────────────────────────────────────────────────
-const TEMPLATES = 'templates';
-const CONTENT   = 'content';
-const DIST      = 'dist';
+const ROOT      = __dirname;
+const TEMPLATES = path.join(ROOT, 'templates');
+const CONTENT   = path.join(ROOT, 'content');
+const DIST      = path.join(ROOT, 'dist');
 const PAGES     = ['index', 'individual-therapy', 'couples-therapy', 'about', 'rates'];
 
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
 
 // Copy static assets (images, CSS, fonts, etc.) into dist
-fs.readdirSync('.').forEach(file => {
+const ASSET_EXTS = ['.jpg','.jpeg','.png','.gif','.svg','.css','.ico','.txt','.xml','.webp'];
+fs.readdirSync(ROOT).forEach(file => {
   const ext = path.extname(file).toLowerCase();
-  if (['.jpg','.jpeg','.png','.gif','.svg','.css','.ico','.txt','.xml','.webp'].includes(ext)) {
-    fs.copyFileSync(file, path.join(DIST, file));
-  }
+  if (!ASSET_EXTS.includes(ext)) return;
+  const src = path.join(ROOT, file);
+  if (!fs.statSync(src).isFile()) return;   // skip directories
+  fs.copyFileSync(src, path.join(DIST, file));
+  console.log(`  copied: ${file}`);
 });
 
 // Copy admin folder into dist
@@ -40,7 +44,7 @@ function copyDir(src, dest) {
     }
   });
 }
-copyDir('admin', path.join(DIST, 'admin'));
+copyDir(path.join(ROOT, 'admin'), path.join(DIST, 'admin'));
 
 // ── Load shared/global content ───────────────────────────────────────────────
 const global = JSON.parse(fs.readFileSync(path.join(CONTENT, 'global.json'), 'utf8'));
