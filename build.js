@@ -27,6 +27,21 @@ fs.readdirSync('.').forEach(file => {
   }
 });
 
+// Copy admin folder into dist
+function copyDir(src, dest) {
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  fs.readdirSync(src).forEach(file => {
+    const srcPath = path.join(src, file);
+    const destPath = path.join(dest, file);
+    if (fs.statSync(srcPath).isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  });
+}
+copyDir('admin', path.join(DIST, 'admin'));
+
 // ── Load shared/global content ───────────────────────────────────────────────
 const global = JSON.parse(fs.readFileSync(path.join(CONTENT, 'global.json'), 'utf8'));
 
