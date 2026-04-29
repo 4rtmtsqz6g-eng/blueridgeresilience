@@ -34,6 +34,8 @@ collections:
         file: "content/index.json"
         format: json
         fields:
+                  - { name: hero_h1,    label: "Hero headline (main text)",      widget: string }
+          - { name: hero_h1_em, label: "Hero headline (emphasis word)",  widget: string, hint: "This word appears in the accent color at the end of the headline" }
           - { name: hero_lead,  label: "Hero intro paragraph",           widget: text, hint: "Use _text_ for italic" }
           - { name: change_p1, label: "\"You're not alone\" — paragraph 1", widget: text, hint: "Use _text_ for italic" }
           - { name: change_p2, label: "\"You're not alone\" — paragraph 2", widget: text }
