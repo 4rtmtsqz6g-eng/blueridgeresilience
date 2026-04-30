@@ -1,0 +1,81 @@
+/* ═══ INDIVIDUAL THERAPY SPECIFIC ═══ */
+
+/* WHO */
+.who { padding: 120px 0; background: var(--milk); }
+.who-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.who-head .kicker { justify-content: center; margin-bottom: 20px; }
+.who-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px; }
+.who-head h2 em { font-style: italic; color: var(--clay-dk); }
+.who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.who-card {
+  background: var(--shell); border-radius: 16px; padding: 32px 28px;
+  border: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.6;
+  color: var(--mid); position: relative; transition: all 0.3s var(--ease);
+}
+.who-card:hover { transform: translateY(-3px); border-color: var(--clay-soft); }
+.who-card::before { display: none; }
+
+/* APPROACH */
+.approach { padding: 120px 0; background: var(--shell); }
+.approach-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.approach-content h2 { font-size: clamp(36px, 4vw, 60px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+.approach-content h2 em { font-style: italic; color: var(--clay-dk); }
+.approach-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+.approach-content strong { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--plum); font-size: 19px; }
+.approach-figure { position: relative; }
+.approach-figure img { width: 100%; height: auto; max-height: 560px; border-radius: 20px; filter: var(--photo-filter); }
+.approach-figure::after {
+  content: ''; position: absolute; inset: 18px 18px -18px -18px;
+  border: 1px solid var(--clay); border-radius: 20px; z-index: -1;
+}
+
+/* CAN HELP — dark */
+.addresses { padding: 120px 0; background: var(--plum); }
+.addresses .kicker { color: rgba(248,243,231,.7); }
+.addresses .kicker::before { background: rgba(248,243,231,.5); }
+.addresses-head { max-width: 760px; margin: 0 auto 72px; text-align: center; }
+.addresses-head h2 { font-size: clamp(32px, 4vw, 56px); color: var(--milk); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 20px; }
+.addresses-head h2 em { font-style: italic; color: var(--clay-soft); }
+.addresses-head p { font-size: 17px; color: rgba(248,243,231,.75); max-width: 600px; margin: 0 auto 40px; }
+.concerns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 960px; margin: 0 auto; }
+.concern-item {
+  background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14); border-radius: 12px;
+  padding: 24px 22px; display: flex; gap: 16px; align-items: baseline;
+}
+.concern-item p { font-size: 15.5px; color: rgba(248,243,231,.85); line-height: 1.5; margin: 0; }
+
+/* FIRST SESSION */
+.first-session { padding: 120px 0; background: var(--shell-deep); }
+.first-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.first-content h2 { font-size: clamp(36px, 4vw, 60px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+.first-content h2 em { font-style: italic; color: var(--clay-dk); }
+.first-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+
+/* TELEHEALTH */
+.telehealth { padding: 120px 0; background: var(--milk); }
+.telehealth-head { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+.telehealth-head .kicker { justify-content: center; margin-bottom: 20px; }
+.telehealth-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 16px; }
+.telehealth-head h2 em { font-style: italic; color: var(--clay-dk); }
+.telehealth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 960px; margin: 0 auto; }
+.tele-card {
+  background: var(--shell); border-radius: 20px; padding: 40px 36px;
+  border: 1px solid var(--rule-soft);
+}
+.tele-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--clay-dk); font-weight: 500; margin-bottom: 16px; }
+.tele-card h3 { font-family: var(--display); font-size: 30px; color: var(--plum); margin-bottom: 16px; }
+.tele-card p { font-size: 16px; line-height: 1.65; color: var(--mid); }
+
+/* Responsive */
+@media (max-width: 1040px) {
+  .who-grid { grid-template-columns: 1fr 1fr; }
+  .approach-inner, .first-inner { grid-template-columns: 1fr; gap: 56px; }
+  .approach-figure { max-width: 420px; }
+  .concerns-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .who-grid { grid-template-columns: 1fr; }
+  .telehealth-grid { grid-template-columns: 1fr; }
+  .concerns-grid { grid-template-columns: 1fr; }
+  .who, .approach, .addresses, .first-session, .telehealth { padding: 80px 0; }
+}

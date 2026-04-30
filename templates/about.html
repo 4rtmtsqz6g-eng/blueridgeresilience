@@ -7,6 +7,7 @@
   <meta name="description" content="Meet Kate Modica, LCSW — a therapist in Charlottesville, VA specializing in AEDP for individuals and EFT for couples. Warm, collaborative, experiential care." />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Blue Ridge Resilience Therapy" />
@@ -20,94 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Inter:wght@300..600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css" />
 
-  <style>
-    /* ═══ ABOUT PAGE SPECIFIC ═══ */
-
-    /* About hero image object-position */
-    .page-hero-figure img { object-position: center 15%; }
-
-    /* WHY */
-    .why { padding: 120px 0; background: var(--milk); }
-    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
-    .why-content h2 { font-size: clamp(32px, 3.8vw, 52px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 32px; }
-    .why-content h2 em { font-style: italic; color: var(--clay-dk); }
-    .why-content p { font-size: 17.5px; line-height: 1.7; margin-bottom: 22px; color: var(--mid); }
-
-    /* HOW I WORK — dark */
-    .how-work { padding: 120px 0; background: var(--plum); }
-    .how-work .kicker { color: rgba(248,243,231,.7); }
-    .how-work .kicker::before { background: rgba(248,243,231,.5); }
-    .how-work-inner { max-width: 860px; margin: 0 auto; }
-    .how-work h2 { font-size: clamp(36px, 4vw, 60px); color: var(--milk); line-height: 1.02; letter-spacing: -0.025em; margin: 20px 0 40px; }
-    .how-work h2 em { font-style: italic; color: var(--clay-soft); }
-    .how-work p { font-size: 18px; line-height: 1.7; color: rgba(248,243,231,.82); margin-bottom: 24px; }
-    .how-work strong { color: var(--clay-soft); font-style: italic; font-family: var(--display); }
-
-    /* QUALITIES */
-    .qualities-section { padding: 120px 0; background: var(--shell); }
-    .qualities-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
-    .qualities-content h2 { font-size: clamp(32px, 3.8vw, 52px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 28px; }
-    .qualities-content h2 em { font-style: italic; color: var(--clay-dk); }
-    .qualities-content p { font-size: 17px; line-height: 1.7; color: var(--mid); margin-bottom: 20px; }
-    .qualities-list { list-style: none; }
-    .qualities-list li {
-      font-family: var(--display);
-      font-size: clamp(28px, 3.2vw, 42px);
-      font-style: italic;
-      font-weight: 400;
-      color: var(--plum);
-      padding: 22px 0;
-      border-bottom: 1px solid var(--rule-soft);
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      transition: color 0.2s;
-    }
-    .qualities-list li:first-child { border-top: 1px solid var(--rule-soft); }
-    .qualities-list li::before { content: '◆'; font-style: normal; font-size: 10px; color: var(--clay); flex-shrink: 0; }
-    .qualities-list li:hover { color: var(--clay-dk); }
-
-    /* OUTSIDE */
-    .outside { padding: 120px 0; background: var(--shell-deep); }
-    .outside-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
-    .outside-content h2 { font-size: clamp(32px, 3.8vw, 52px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 32px; }
-    .outside-content h2 em { font-style: italic; color: var(--clay-dk); }
-    .outside-content p { font-size: 17.5px; line-height: 1.7; margin-bottom: 22px; color: var(--mid); }
-    .outside-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .outside-photos .photo-wrap img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 16px; filter: contrast(1.02) saturate(0.95); transition: transform 0.5s var(--ease); }
-    .outside-photos .photo-wrap img:hover { transform: translateY(-4px); }
-    .outside-photos .photo-wrap:first-child { margin-top: 30px; }
-    .outside-photos .photo-wrap:last-child { margin-top: -20px; }
-
-    /* CREDENTIALS */
-    .credentials { padding: 120px 0; background: var(--milk); }
-    .credentials-inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: start; }
-    .credentials-content h2 { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 24px; }
-    .credentials-content h2 em { font-style: italic; color: var(--clay-dk); }
-    .credentials-content p { font-size: 16px; line-height: 1.7; color: var(--mid); max-width: 360px; }
-    .cred-list { list-style: none; }
-    .cred-item {
-      padding: 24px 0; border-bottom: 1px solid var(--rule-soft);
-      display: grid; grid-template-columns: auto 1fr; gap: 20px;
-    }
-    .cred-item:first-child { border-top: 1px solid var(--rule-soft); }
-    .cred-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--clay); margin-top: 7px; flex-shrink: 0; }
-    .cred-body h4 { font-family: var(--display); font-size: 22px; font-weight: 400; color: var(--plum); margin-bottom: 6px; }
-    .cred-body p { font-size: 14.5px; color: var(--muted); line-height: 1.55; margin: 0; }
-
-    /* Responsive */
-    @media (max-width: 1040px) {
-      .why-inner, .qualities-inner, .outside-inner, .credentials-inner { grid-template-columns: 1fr; gap: 56px; }
-      .why, .how-work, .qualities-section, .outside, .credentials { padding: 80px 0; }
-      .outside-photos .photo-wrap:first-child, .outside-photos .photo-wrap:last-child { margin-top: 0; }
-    }
-    @media (max-width: 640px) {
-      .outside-photos { grid-template-columns: 1fr; }
-      .qualities-list li { font-size: 26px; }
-    }
-  </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -160,7 +75,7 @@
         <p class="page-hero-lead reveal reveal-d2">__hero_p__</p>
       </div>
       <div class="page-hero-figure reveal reveal-d2">
-        <img src="IMG_0852 2 copy.JPG" alt="Kate Modica, LCSW, therapist in Charlottesville, VA" />
+        <img src="kate-portrait-about.jpg" alt="Kate Modica, LCSW, therapist in Charlottesville, VA" />
       </div>
     </div>
   </div>
@@ -232,10 +147,10 @@
       </div>
       <div class="outside-photos reveal reveal-d1">
         <div class="photo-wrap">
-          <img src="IMG_5417 2 copy.JPG" alt="Kate kayaking on a calm lake" loading="lazy" />
+          <img src="kate-kayaking.jpg" alt="Kate kayaking on a calm lake" loading="lazy" />
         </div>
         <div class="photo-wrap">
-          <img src="IMG_7451 copy.jpeg" alt="Kate enjoying a board game at home" loading="lazy" />
+          <img src="kate-board-game.jpg" alt="Kate enjoying a board game at home" loading="lazy" />
         </div>
       </div>
     </div>
@@ -304,7 +219,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="container footer-inner">
-    <div class="footer-big">You don't have to figure it out <em>alone.</em></div>
+    <div class="footer-big">Healing happens in <em>connection.</em></div>
     <div class="footer-top">
       <div>
         <a href="index.html" class="brand">

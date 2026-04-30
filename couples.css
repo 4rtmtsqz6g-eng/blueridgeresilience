@@ -1,0 +1,76 @@
+/* ═══ COUPLES THERAPY SPECIFIC ═══ */
+
+/* WHO */
+.who { padding: 120px 0; background: var(--milk); }
+.who-head { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+.who-head .kicker { justify-content: center; margin-bottom: 20px; }
+.who-head h2 { font-size: clamp(32px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 20px; }
+.who-head h2 em { font-style: italic; color: var(--clay-dk); }
+.who-head p { font-size: 17px; color: var(--mid); line-height: 1.65; }
+.who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.who-card {
+  background: var(--shell); border-radius: 16px; padding: 32px 28px;
+  border: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.6;
+  color: var(--mid); transition: all 0.3s var(--ease);
+}
+.who-card:hover { transform: translateY(-3px); border-color: var(--clay-soft); }
+.who-card::before { display: none; }
+
+/* APPROACH */
+.approach { padding: 120px 0; background: var(--shell); }
+.approach-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.approach-content h2 { font-size: clamp(36px, 4vw, 58px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 32px; }
+.approach-content h2 em { font-style: italic; color: var(--clay-dk); }
+.approach-content p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+
+/* RUMI — dark */
+.rumi { padding: 120px 0; background: var(--plum); text-align: center; position: relative; overflow: hidden; }
+.rumi::before { content: ''; position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(211,103,62,.12), transparent 60%); pointer-events: none; }
+.rumi-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
+.rumi blockquote { font-family: var(--display); font-style: italic; font-size: clamp(24px, 3.2vw, 44px); font-weight: 300; line-height: 1.35; color: var(--milk); letter-spacing: -0.015em; }
+.rumi cite { display: block; margin-top: 28px; font-family: var(--body); font-style: normal; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(248,243,231,.5); font-weight: 500; }
+
+/* SESSION */
+.session { padding: 120px 0; background: var(--shell-deep); }
+.session-head { max-width: 760px; margin: 0 auto 72px; }
+.session-head h2 { font-size: clamp(36px, 4vw, 58px); line-height: 1; letter-spacing: -0.025em; margin: 20px 0 20px; }
+.session-head h2 em { font-style: italic; color: var(--clay-dk); }
+.session-head p { font-size: 17px; line-height: 1.7; margin-bottom: 20px; color: var(--mid); }
+.session-steps { display: flex; flex-direction: column; gap: 0; max-width: 900px; }
+.session-step {
+  display: grid; grid-template-columns: 72px 1fr; gap: 32px; align-items: start;
+  padding: 32px 0; border-top: 1px solid var(--rule);
+}
+.session-step:last-child { border-bottom: 1px solid var(--rule); }
+.step-num { font-family: var(--display); font-style: italic; font-size: 52px; font-weight: 300; color: var(--clay); line-height: 0.9; }
+.session-step h3 { font-family: var(--display); font-size: 28px; color: var(--plum); margin-bottom: 10px; }
+.session-step p { font-size: 16px; line-height: 1.65; color: var(--mid); }
+
+/* OUTCOMES — dark */
+.outcomes { padding: 120px 0; background: var(--plum); }
+.outcomes .kicker { color: rgba(248,243,231,.7); }
+.outcomes .kicker::before { background: rgba(248,243,231,.5); }
+.outcomes-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.outcomes-content h2 { font-size: clamp(36px, 4vw, 58px); color: var(--milk); line-height: 1.02; letter-spacing: -0.025em; margin: 20px 0 32px; }
+.outcomes-content h2 em { font-style: italic; color: var(--clay-soft); }
+.outcomes-content p { font-size: 17px; line-height: 1.7; color: rgba(248,243,231,.8); margin-bottom: 20px; }
+.stat-stack { display: flex; flex-direction: column; gap: 20px; }
+.stat-card {
+  background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14);
+  border-radius: 16px; padding: 36px 32px;
+}
+.stat-num { font-family: var(--display); font-style: italic; font-size: clamp(48px, 5.5vw, 72px); font-weight: 300; color: var(--clay-soft); line-height: 0.95; margin-bottom: 14px; letter-spacing: -0.02em; }
+.stat-card p { font-size: 15.5px; color: rgba(248,243,231,.8); line-height: 1.55; margin: 0; }
+.stat-source { font-family: var(--display); font-style: italic; font-size: 13px; color: rgba(248,243,231,.45); margin-top: 24px; }
+
+/* Responsive */
+@media (max-width: 1040px) {
+  .who-grid { grid-template-columns: 1fr 1fr; }
+  .approach-inner, .outcomes-inner { grid-template-columns: 1fr; gap: 56px; }
+  .who, .approach, .rumi, .session, .outcomes { padding: 80px 0; }
+}
+@media (max-width: 640px) {
+  .who-grid { grid-template-columns: 1fr; }
+  .session-step { grid-template-columns: 52px 1fr; gap: 20px; }
+  .step-num { font-size: 38px; }
+}

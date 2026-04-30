@@ -7,6 +7,7 @@
   <meta name="description" content="Rates, insurance, and payment information for therapy with Kate Modica, LCSW in Charlottesville, VA. Individual sessions $155, couples sessions $200. HSA/FSA accepted, out-of-network reimbursement supported." />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Blue Ridge Resilience Therapy" />
@@ -20,101 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Inter:wght@300..600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="rates.css" />
 
-  <style>
-    /* ═══ RATES PAGE SPECIFIC ═══ */
-
-    /* HERO */
-    .page-hero-centered { background: radial-gradient(ellipse at 50% 160%, rgba(211,103,62,.1), transparent 60%); }
-
-    /* RATES CARDS */
-    .rates { padding: 100px 0; background: var(--shell); }
-    .rates-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
-    .rate-card {
-      background: var(--milk); border-radius: 24px; padding: 48px 44px;
-      border: 1px solid var(--rule-soft); position: relative; overflow: hidden;
-    }
-    .rate-card:first-child { border-top: 3px solid var(--clay); }
-    .rate-card:last-child { border-top: 3px solid var(--plum); }
-    .rate-card::before {
-      content: ''; position: absolute; top: -60px; right: -60px;
-      width: 200px; height: 200px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(211,103,62,.08), transparent 70%);
-    }
-    .rate-card:last-child::before { background: radial-gradient(circle, rgba(74,44,30,.07), transparent 70%); }
-    .rate-label { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--clay-dk); font-weight: 500; margin-bottom: 20px; }
-    .rate-card:last-child .rate-label { color: var(--plum); }
-    .rate-card h3 { font-family: var(--display); font-size: 30px; color: var(--plum); margin-bottom: 8px; }
-    .rate-duration { font-size: 13.5px; color: var(--muted); margin-bottom: 28px; letter-spacing: 0.04em; }
-    .rate-price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--rule-soft); }
-    .rate-amount { font-family: var(--display); font-size: 72px; font-weight: 300; color: var(--plum); line-height: 0.9; letter-spacing: -0.02em; }
-    .rate-per { font-size: 14px; color: var(--muted); font-weight: 400; }
-    .rate-card p { font-size: 15.5px; line-height: 1.65; color: var(--mid); }
-
-    /* PAYMENT */
-    .payment { padding: 100px 0; background: var(--milk); }
-    .payment-inner { display: flex; flex-direction: column; gap: 20px; max-width: 860px; margin: 0 auto; }
-    .payment-block {
-      background: var(--shell); border-radius: 20px; padding: 40px 36px;
-      border: 1px solid var(--rule-soft);
-    }
-    .payment-block:first-child { border-left: 4px solid var(--plum); }
-    .payment-block:last-child  { border-left: 4px solid var(--clay); }
-    .payment-block h2 { font-size: clamp(24px, 2.6vw, 36px); line-height: 1.02; letter-spacing: -0.02em; margin: 20px 0 24px; }
-    .payment-block h2 em { font-style: italic; color: var(--clay-dk); }
-    .payment-block p { font-size: 16px; line-height: 1.7; margin-bottom: 18px; color: var(--mid); }
-
-    /* RATES HEADER */
-    .rates-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
-    .rates-header h2 { font-size: clamp(32px, 3.8vw, 48px); line-height: 1.02; letter-spacing: -0.02em; margin-top: 16px; }
-    .rates-header h2 em { font-style: italic; color: var(--clay-dk); }
-    .payment-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 18px; background: var(--milk); border: 1px solid var(--rule);
-      border-radius: 999px; font-size: 13.5px; font-weight: 500; color: var(--plum);
-      transition: all 0.3s var(--ease);
-    }
-    .tag:hover { background: var(--plum); color: var(--milk); border-color: var(--plum); }
-    .tag::before { content: '✓'; font-size: 12px; color: var(--clay); }
-    .tag:hover::before { color: var(--clay-soft); }
-
-    /* GFE — dark */
-    .gfe { padding: 100px 0; background: var(--plum); position: relative; overflow: hidden; }
-    .gfe::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(211,103,62,.1), transparent 60%); pointer-events: none; }
-    .gfe .kicker { color: rgba(248,243,231,.7); }
-    .gfe .kicker::before { background: rgba(248,243,231,.5); }
-    .gfe-inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
-    .gfe h2 { font-size: clamp(32px, 4vw, 56px); color: var(--milk); line-height: 1.02; letter-spacing: -0.025em; margin: 20px 0 32px; }
-    .gfe h2 em { font-style: italic; color: var(--clay-soft); }
-    .gfe-lead { font-size: 18px; line-height: 1.7; color: rgba(248,243,231,.85); margin-bottom: 32px; }
-    .gfe-box {
-      background: rgba(248,243,231,.07); border: 1px solid rgba(248,243,231,.14);
-      border-left: 3px solid var(--clay-soft); border-radius: 4px;
-      padding: 44px 52px; backdrop-filter: blur(8px);
-    }
-    .gfe-box p { font-size: 15.5px; line-height: 1.7; color: rgba(248,243,231,.8); margin-bottom: 24px; }
-    .gfe-box p:last-child { margin-bottom: 0; }
-    .gfe-box a { color: var(--clay-soft); border-bottom: 1px solid var(--clay-soft); padding-bottom: 1px; transition: all 0.3s var(--ease); }
-    .gfe-box a:hover { color: var(--milk); border-bottom-color: var(--milk); }
-
-    /* BRIDGE */
-    .rates-bridge { padding: 72px 0; }
-    .rates-bridge p { font-size: 18px; color: var(--mid); max-width: 600px; margin: 0 auto 28px; text-align: center; }
-    .rates-bridge-cta { text-align: center; }
-
-    /* Responsive */
-    @media (max-width: 1040px) {
-      .rates-grid { grid-template-columns: 1fr; max-width: 520px; }
-      .rates, .payment, .gfe { padding: 80px 0; }
-    }
-    @media (max-width: 640px) {
-      .rate-card { padding: 36px 28px; }
-      .rate-amount { font-size: 56px; }
-      .gfe-box { padding: 28px 24px; }
-      .payment-block { padding: 32px 28px; }
-    }
-  </style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -246,7 +154,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="container footer-inner">
-    <div class="footer-big">You don't have to figure it out <em>alone.</em></div>
+    <div class="footer-big">Healing happens in <em>connection.</em></div>
     <div class="footer-top">
       <div>
         <a href="index.html" class="brand">
