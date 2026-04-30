@@ -111,19 +111,9 @@ p { color: var(--ink); }
   text-transform: uppercase;
   color: var(--clay-dk);
   font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-.kicker::before {
-  content: '';
-  width: 20px;
-  height: 1px;
-  background: var(--clay-dk);
-  flex-shrink: 0;
+  display: inline-block;
 }
 .kicker-light { color: rgba(248, 243, 231, 0.75); }
-.kicker-light::before { background: rgba(248, 243, 231, 0.5); }
 
 /* ─── HEADER ─── */
 .site-header {
