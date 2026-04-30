@@ -21,7 +21,7 @@ const PAGES     = ['index', 'individual-therapy', 'couples-therapy', 'about', 'r
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
 
 // Copy static assets (images, CSS, fonts, etc.) into dist
-const ASSET_EXTS = ['.jpg','.jpeg','.png','.gif','.svg','.css','.ico','.txt','.xml','.webp'];
+const ASSET_EXTS = ['.jpg','.jpeg','.png','.gif','.svg','.css','.ico','.txt','.xml','.webp','.webmanifest'];
 fs.readdirSync(ROOT).forEach(file => {
   const ext = path.extname(file).toLowerCase();
   if (!ASSET_EXTS.includes(ext)) return;
